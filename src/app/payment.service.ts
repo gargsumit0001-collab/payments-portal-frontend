@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class PaymentService {
-  private api = 'http://localhost:7000/api/payments';
+  private api = 'http://localhost:5000/api/payments';
   constructor(private http: HttpClient) {}
 
   list(): Observable<any[]> { return this.http.get<any[]>(this.api); }
